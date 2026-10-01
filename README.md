@@ -1,6 +1,8 @@
 # Acervo de Linguagem Visual
 
-Dashboard de consulta com 114 fichas em nove módulos, busca, comparação e prompts expansíveis. Referências visuais ainda aguardam curadoria. Os prompts não foram testados em geradores.
+Dashboard de consulta com 172 fichas em 14 módulos, busca, comparação e prompts expansíveis. Referências visuais ainda aguardam curadoria. Os prompts não foram testados em geradores.
+
+Os módulos Câmeras e suportes, Lentes, Realismo sem cara de IA, Dramaturgia brasileira e Rio e Brasil vêm de um estudo de produção sobre o look de séries e novelas brasileiras e sobre como evitar a aparência de imagem gerada por IA. Parte deles adapta prompts testados em inglês; as versões em português ainda não foram testadas.
 
 ## Abrir
 
