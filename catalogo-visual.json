@@ -1743,214 +1743,6 @@
   },
   {
     "id": "ref-135",
-    "cat": "Realismo sem cara de IA",
-    "name": "Pele real",
-    "alias": "Real skin · anti-IA",
-    "read": "Poros, oleosidade e tom irregular substituem a pele de cera.",
-    "prompt": "Mostre pele real, com poros visíveis, oleosidade ou suor, tom irregular, barba por fazer e pouca maquiagem, sem retoque.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Real skin · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-136",
-    "cat": "Realismo sem cara de IA",
-    "name": "Rosto comum com marcas",
-    "alias": "Ordinary faces · anti-IA",
-    "read": "Dizer \"não é modelo\" não funciona; descrever o que existe no rosto, sim.",
-    "prompt": "Descreva cada pessoa por idade, ocupação, corpo e marcas concretas, como olheira, cicatriz, dente torto ou pescoço queimado de sol. Não use \"bonito\".",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Ordinary faces · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-137",
-    "cat": "Realismo sem cara de IA",
-    "name": "Composição fora do centro",
-    "alias": "Off-center framing · anti-IA",
-    "read": "Sujeito no terço e ponto de fuga deslocado quebram a simetria típica da IA.",
-    "prompt": "Coloque o sujeito em um dos terços, com a câmera a cerca de 30 graus das paredes e o ponto de fuga fora do centro.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Off-center framing · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-138",
-    "cat": "Realismo sem cara de IA",
-    "name": "Gesto no meio da ação",
-    "alias": "Mid-action · olhar fora da câmera",
-    "read": "Ninguém posa: as pessoas estão fazendo algo e olhando para algum lugar.",
-    "prompt": "Mostre as pessoas no meio de um gesto, falando, andando ou pegando algo, e diga para onde olham, sem olhar para a câmera.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Mid-action · olhar fora da câmera Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-139",
-    "cat": "Realismo sem cara de IA",
-    "name": "Luz com fonte nomeada",
-    "alias": "Motivated light · anti-IA",
-    "read": "Uma fonte que existe na cena, com direção e cor, evita a luz uniforme sem origem.",
-    "prompt": "Ilumine apenas com fontes que existem no lugar, dizendo direção, dureza e cor, como fluorescente no teto ou janela à esquerda, e deixe metade do rosto na sombra.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Motivated light · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-140",
-    "cat": "Realismo sem cara de IA",
-    "name": "Branco neutro, sem hora dourada",
-    "alias": "Neutral white balance · anti-IA",
-    "read": "Dominante amarela e pôr do sol são assinaturas de imagem gerada.",
-    "prompt": "Use luz de dia nublado ou a luz artificial do ambiente, com balanço de branco neutro, sem hora dourada nem dominante amarela.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Neutral white balance · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-141",
-    "cat": "Realismo sem cara de IA",
-    "name": "Paleta contida",
-    "alias": "Muted colors · anti-IA",
-    "read": "Saturação baixa e nitidez desigual afastam o aspecto HDR.",
-    "prompt": "Mantenha cores naturais e pouco saturadas, nitidez moderada e algumas altas luzes estourando, sem aspecto HDR.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Muted colors · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-142",
-    "cat": "Realismo sem cara de IA",
-    "name": "Cenário gasto",
-    "alias": "Lived-in set · anti-IA",
-    "read": "O que não é descrito sai limpo; sujeira e desgaste precisam ser pedidos.",
-    "prompt": "Descreva o desgaste específico do lugar: manchas de umidade, tinta descascada nos cantos, marcas de mão, fios aparentes e objetos fora do lugar.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Lived-in set · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-143",
-    "cat": "Realismo sem cara de IA",
-    "name": "Figurino usado",
-    "alias": "Worn wardrobe · anti-IA",
-    "read": "Roupa nova e passada denuncia produção artificial.",
-    "prompt": "Vista as pessoas com roupas usadas, desbotadas, amassadas e de caimento imperfeito, com gola larga, barra desfiada ou tênis sujo.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Worn wardrobe · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-144",
-    "cat": "Realismo sem cara de IA",
-    "name": "Figurantes variados",
-    "alias": "Varied extras · sem clones",
-    "read": "Poucos figurantes, diferentes entre si, evitam rostos repetidos e derretidos.",
-    "prompt": "Use poucos figurantes, de idades, corpos e tons de pele diferentes, de costas ou fora de foco, nunca repetidos.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Varied extras · sem clones Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-145",
-    "cat": "Realismo sem cara de IA",
-    "name": "Um só defeito óptico",
-    "alias": "One optical flaw · anti-IA",
-    "read": "Um defeito assumido convence; todos juntos viram paródia.",
-    "prompt": "Escolha um único defeito de imagem e assuma-o, como grão fino, halo em volta das luzes ou foco levemente perdido, sem acumular efeitos.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "One optical flaw · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-146",
-    "cat": "Realismo sem cara de IA",
-    "name": "Horizonte levemente torto",
-    "alias": "Handheld · tilted horizon",
-    "read": "A câmera de uma pessoa nunca está perfeitamente nivelada.",
-    "prompt": "Segure a câmera na mão, na altura do ombro, em eixo oblíquo, com o horizonte levemente inclinado.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Handheld · tilted horizon Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-147",
-    "cat": "Realismo sem cara de IA",
-    "name": "Primeiro plano sujo",
-    "alias": "Dirty foreground · anti-IA",
-    "read": "Um elemento desfocado entre a câmera e a cena faz o quadro parecer flagrado.",
-    "prompt": "Coloque um elemento desfocado entre a câmera e a ação, como batente de porta, ombro de alguém, coluna de carro ou grade, cobrindo parte do quadro.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Dirty foreground · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-148",
-    "cat": "Realismo sem cara de IA",
-    "name": "Exposição imperfeita",
-    "alias": "Imperfect exposure · anti-IA",
-    "read": "Janela estourada e pretos leitosos são marcas de uma câmera real.",
-    "prompt": "Deixe a janela ou o céu estourar e os pretos ficarem levemente leitosos, com sombras densas que ainda guardam detalhe.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Imperfect exposure · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-149",
-    "cat": "Realismo sem cara de IA",
-    "name": "Fotograma, não pôster",
-    "alias": "Frame grab · termos a evitar",
-    "read": "Pedir um quadro do episódio e cortar os termos de pôster muda o resultado inteiro.",
-    "prompt": "Peça um quadro tirado de um episódio, não um pôster, foto de divulgação ou retrato posado. Evite termos como 8K, ultra-realista, cinematográfico, obra-prima, hora dourada, HDR e teal e laranja, e proíba texto, logotipo, legenda, marca d'água e tarjas pretas.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Prompts de produção testados",
-    "status": "Pesquisa de produção",
-    "tags": "Frame grab · termos a evitar Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-150",
-    "cat": "Realismo sem cara de IA",
-    "name": "Ordem do pedido",
-    "alias": "Prompt skeleton · anti-IA",
-    "read": "O mais importante vem primeiro; o modelo pesa mais o começo do texto.",
-    "prompt": "Escreva o pedido nesta ordem: meio e intenção, lugar e fontes de luz, momento, pessoas, câmera e lente, composição, luz, textura e cor, restrições. Use \"fotorrealista\" uma única vez.",
-    "src": "Estudo de realismo · dramaturgia BR",
-    "pages": "Pesquisa IA x filme",
-    "status": "Pesquisa de produção",
-    "tags": "Prompt skeleton · anti-IA Realismo sem cara de IA",
-    "kind": "pending"
-  },
-  {
-    "id": "ref-151",
     "cat": "Dramaturgia brasileira",
     "name": "Look de série brasileira",
     "alias": "Série BR · streaming",
@@ -1963,7 +1755,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-152",
+    "id": "ref-136",
     "cat": "Dramaturgia brasileira",
     "name": "Look de novela de estúdio",
     "alias": "Novela · estúdio",
@@ -1976,7 +1768,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-153",
+    "id": "ref-137",
     "cat": "Dramaturgia brasileira",
     "name": "Close de novela",
     "alias": "Close · novela",
@@ -1989,7 +1781,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-154",
+    "id": "ref-138",
     "cat": "Dramaturgia brasileira",
     "name": "Câmera nervosa documental",
     "alias": "Documental · Tropa de Elite · O Mecanismo",
@@ -2002,7 +1794,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-155",
+    "id": "ref-139",
     "cat": "Dramaturgia brasileira",
     "name": "Elenco de rua",
     "alias": "Cidade de Deus · elenco real",
@@ -2015,7 +1807,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-156",
+    "id": "ref-140",
     "cat": "Dramaturgia brasileira",
     "name": "Noite de luz mista",
     "alias": "Sódio + LED · noite",
@@ -2028,7 +1820,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-157",
+    "id": "ref-141",
     "cat": "Dramaturgia brasileira",
     "name": "Presídio de série",
     "alias": "Carcereiros · Irmandade",
@@ -2041,7 +1833,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-158",
+    "id": "ref-142",
     "cat": "Dramaturgia brasileira",
     "name": "Zenital institucional",
     "alias": "Zenital · Carcereiros · Segunda Chamada",
@@ -2054,7 +1846,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-159",
+    "id": "ref-143",
     "cat": "Dramaturgia brasileira",
     "name": "Céu branco estourado",
     "alias": "Os Outros · overcast",
@@ -2067,7 +1859,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-160",
+    "id": "ref-144",
     "cat": "Dramaturgia brasileira",
     "name": "Cor do próprio lugar",
     "alias": "Paleta brasileira · sem filtro",
@@ -2080,7 +1872,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-161",
+    "id": "ref-145",
     "cat": "Rio e Brasil",
     "name": "Rua carioca",
     "alias": "Rio · rua",
@@ -2093,7 +1885,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-162",
+    "id": "ref-146",
     "cat": "Rio e Brasil",
     "name": "Calçadão de Copacabana",
     "alias": "Copacabana · orla",
@@ -2106,7 +1898,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-163",
+    "id": "ref-147",
     "cat": "Rio e Brasil",
     "name": "Centro à noite",
     "alias": "Presidente Vargas · ponto de ônibus",
@@ -2119,7 +1911,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-164",
+    "id": "ref-148",
     "cat": "Rio e Brasil",
     "name": "Morro e laje",
     "alias": "Morro · laje · caixa d'água",
@@ -2132,7 +1924,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-165",
+    "id": "ref-149",
     "cat": "Rio e Brasil",
     "name": "Gente e figurino",
     "alias": "Rio · figurino",
@@ -2145,7 +1937,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-166",
+    "id": "ref-150",
     "cat": "Rio e Brasil",
     "name": "Comércio de rua",
     "alias": "Ambulante · motoboy",
@@ -2158,7 +1950,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-167",
+    "id": "ref-151",
     "cat": "Rio e Brasil",
     "name": "Viatura da PM",
     "alias": "PMERJ · viatura",
@@ -2171,7 +1963,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-168",
+    "id": "ref-152",
     "cat": "Rio e Brasil",
     "name": "Interior de viatura",
     "alias": "Viatura · interior",
@@ -2184,7 +1976,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-169",
+    "id": "ref-153",
     "cat": "Rio e Brasil",
     "name": "Trânsito",
     "alias": "Ônibus · táxi amarelo",
@@ -2197,7 +1989,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-170",
+    "id": "ref-154",
     "cat": "Rio e Brasil",
     "name": "Plataforma de metrô",
     "alias": "Metrô · plataforma",
@@ -2210,7 +2002,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-171",
+    "id": "ref-155",
     "cat": "Rio e Brasil",
     "name": "Repartição pública",
     "alias": "Repartição · Brasil institucional",
@@ -2223,7 +2015,7 @@
     "kind": "pending"
   },
   {
-    "id": "ref-172",
+    "id": "ref-156",
     "cat": "Rio e Brasil",
     "name": "Presídio brasileiro",
     "alias": "Galeria · cela",

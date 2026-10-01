@@ -1,0 +1,150 @@
+{
+  "titulo": "Lei do realismo",
+  "preambulo": "Toda imagem gerada a partir deste acervo obedece a estes 16 artigos. As fichas escolhem plano, luz, câmera e lente; a lei garante que o resultado pareça filmado, não gerado.",
+  "bloco": "Quadro tirado de um episódio de série brasileira, não pôster, foto de divulgação ou retrato posado. Pessoas comuns, com pele real (poros, suor, tom irregular), marcas concretas e roupas usadas, no meio de um gesto e sem olhar para a câmera; poucos figurantes, todos diferentes. Luz só das fontes que existem no lugar, balanço de branco neutro, cores contidas, céu ou janela podendo estourar e pretos levemente leitosos. Câmera na mão na altura do ombro, horizonte levemente inclinado, sujeito fora do centro e um elemento desfocado em primeiro plano. Cenário com desgaste e sujeira específicos. Um único defeito de imagem, como grão fino. Sem hora dourada, HDR, teal e laranja, iluminação de pôster ou simetria estilizada. Sem texto, logotipo, legenda, marca d'água ou tarjas pretas.",
+  "fonte": "Estudo de realismo · dramaturgia BR",
+  "capitulos": [
+    {
+      "numero": "I",
+      "titulo": "Pessoas",
+      "artigos": [
+        {
+          "n": 1,
+          "titulo": "Pele real",
+          "alias": "Real skin · anti-IA",
+          "regra": "Poros, oleosidade e tom irregular substituem a pele de cera.",
+          "clausula": "Mostre pele real, com poros visíveis, oleosidade ou suor, tom irregular, barba por fazer e pouca maquiagem, sem retoque."
+        },
+        {
+          "n": 2,
+          "titulo": "Rosto comum com marcas",
+          "alias": "Ordinary faces · anti-IA",
+          "regra": "Dizer \"não é modelo\" não funciona; descrever o que existe no rosto, sim.",
+          "clausula": "Descreva cada pessoa por idade, ocupação, corpo e marcas concretas, como olheira, cicatriz, dente torto ou pescoço queimado de sol. Não use \"bonito\"."
+        },
+        {
+          "n": 3,
+          "titulo": "Gesto no meio da ação",
+          "alias": "Mid-action · olhar fora da câmera",
+          "regra": "Ninguém posa: as pessoas estão fazendo algo e olhando para algum lugar.",
+          "clausula": "Mostre as pessoas no meio de um gesto, falando, andando ou pegando algo, e diga para onde olham, sem olhar para a câmera."
+        },
+        {
+          "n": 4,
+          "titulo": "Figurino usado",
+          "alias": "Worn wardrobe · anti-IA",
+          "regra": "Roupa nova e passada denuncia produção artificial.",
+          "clausula": "Vista as pessoas com roupas usadas, desbotadas, amassadas e de caimento imperfeito, com gola larga, barra desfiada ou tênis sujo."
+        },
+        {
+          "n": 5,
+          "titulo": "Figurantes variados",
+          "alias": "Varied extras · sem clones",
+          "regra": "Poucos figurantes, diferentes entre si, evitam rostos repetidos e derretidos.",
+          "clausula": "Use poucos figurantes, de idades, corpos e tons de pele diferentes, de costas ou fora de foco, nunca repetidos."
+        }
+      ]
+    },
+    {
+      "numero": "II",
+      "titulo": "Luz e cor",
+      "artigos": [
+        {
+          "n": 6,
+          "titulo": "Luz com fonte nomeada",
+          "alias": "Motivated light · anti-IA",
+          "regra": "Uma fonte que existe na cena, com direção e cor, evita a luz uniforme sem origem.",
+          "clausula": "Ilumine apenas com fontes que existem no lugar, dizendo direção, dureza e cor, como fluorescente no teto ou janela à esquerda, e deixe metade do rosto na sombra."
+        },
+        {
+          "n": 7,
+          "titulo": "Branco neutro, sem hora dourada",
+          "alias": "Neutral white balance · anti-IA",
+          "regra": "Dominante amarela e pôr do sol são assinaturas de imagem gerada.",
+          "clausula": "Use luz de dia nublado ou a luz artificial do ambiente, com balanço de branco neutro, sem hora dourada nem dominante amarela."
+        },
+        {
+          "n": 8,
+          "titulo": "Paleta contida",
+          "alias": "Muted colors · anti-IA",
+          "regra": "Saturação baixa e nitidez desigual afastam o aspecto HDR.",
+          "clausula": "Mantenha cores naturais e pouco saturadas, nitidez moderada e algumas altas luzes estourando, sem aspecto HDR."
+        },
+        {
+          "n": 9,
+          "titulo": "Exposição imperfeita",
+          "alias": "Imperfect exposure · anti-IA",
+          "regra": "Janela estourada e pretos leitosos são marcas de uma câmera real.",
+          "clausula": "Deixe a janela ou o céu estourar e os pretos ficarem levemente leitosos, com sombras densas que ainda guardam detalhe."
+        }
+      ]
+    },
+    {
+      "numero": "III",
+      "titulo": "Câmera e quadro",
+      "artigos": [
+        {
+          "n": 10,
+          "titulo": "Composição fora do centro",
+          "alias": "Off-center framing · anti-IA",
+          "regra": "Sujeito no terço e ponto de fuga deslocado quebram a simetria típica da IA.",
+          "clausula": "Coloque o sujeito em um dos terços, com a câmera a cerca de 30 graus das paredes e o ponto de fuga fora do centro."
+        },
+        {
+          "n": 11,
+          "titulo": "Horizonte levemente torto",
+          "alias": "Handheld · tilted horizon",
+          "regra": "A câmera de uma pessoa nunca está perfeitamente nivelada.",
+          "clausula": "Segure a câmera na mão, na altura do ombro, em eixo oblíquo, com o horizonte levemente inclinado."
+        },
+        {
+          "n": 12,
+          "titulo": "Primeiro plano sujo",
+          "alias": "Dirty foreground · anti-IA",
+          "regra": "Um elemento desfocado entre a câmera e a cena faz o quadro parecer flagrado.",
+          "clausula": "Coloque um elemento desfocado entre a câmera e a ação, como batente de porta, ombro de alguém, coluna de carro ou grade, cobrindo parte do quadro."
+        },
+        {
+          "n": 13,
+          "titulo": "Um só defeito óptico",
+          "alias": "One optical flaw · anti-IA",
+          "regra": "Um defeito assumido convence; todos juntos viram paródia.",
+          "clausula": "Escolha um único defeito de imagem e assuma-o, como grão fino, halo em volta das luzes ou foco levemente perdido, sem acumular efeitos."
+        }
+      ]
+    },
+    {
+      "numero": "IV",
+      "titulo": "Lugar",
+      "artigos": [
+        {
+          "n": 14,
+          "titulo": "Cenário gasto",
+          "alias": "Lived-in set · anti-IA",
+          "regra": "O que não é descrito sai limpo; sujeira e desgaste precisam ser pedidos.",
+          "clausula": "Descreva o desgaste específico do lugar: manchas de umidade, tinta descascada nos cantos, marcas de mão, fios aparentes e objetos fora do lugar."
+        }
+      ]
+    },
+    {
+      "numero": "V",
+      "titulo": "O pedido",
+      "artigos": [
+        {
+          "n": 15,
+          "titulo": "Fotograma, não pôster",
+          "alias": "Frame grab · termos a evitar",
+          "regra": "Pedir um quadro do episódio e cortar os termos de pôster muda o resultado inteiro.",
+          "clausula": "Peça um quadro tirado de um episódio, não um pôster, foto de divulgação ou retrato posado. Evite termos como 8K, ultra-realista, cinematográfico, obra-prima, hora dourada, HDR e teal e laranja, e proíba texto, logotipo, legenda, marca d'água e tarjas pretas."
+        },
+        {
+          "n": 16,
+          "titulo": "Ordem do pedido",
+          "alias": "Prompt skeleton · anti-IA",
+          "regra": "O mais importante vem primeiro; o modelo pesa mais o começo do texto.",
+          "clausula": "Escreva o pedido nesta ordem: meio e intenção, lugar e fontes de luz, momento, pessoas, câmera e lente, composição, luz, textura e cor, restrições. Use \"fotorrealista\" uma única vez."
+        }
+      ]
+    }
+  ]
+}
