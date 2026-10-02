@@ -97,8 +97,8 @@ mark{background:none;color:inherit;text-decoration:underline;text-decoration-col
 
 /* Acervo */
 .av-shell{display:grid;grid-template-columns:var(--aside) minmax(0,1fr) var(--painel)}
-.av-shell.comparando{grid-template-columns:var(--aside) minmax(0,1fr)}
-.av-shell.comparando .av-painel{display:none}
+.av-shell.larga{grid-template-columns:var(--aside) minmax(0,1fr)}
+.av-shell.larga .av-painel{display:none}
 .av-aside{position:sticky;top:0;align-self:start;max-height:100vh;max-height:100dvh;overflow:auto;overscroll-behavior:contain;padding:var(--s7) var(--s5) var(--s7) var(--m)}
 .av-nav{display:grid;gap:var(--s5)}
 .av-nav ul{list-style:none;margin:0;padding:0;display:grid}
@@ -110,7 +110,7 @@ mark{background:none;color:inherit;text-decoration:underline;text-decoration-col
 .av-nav button[aria-current=true] .rotulo{text-decoration-color:var(--amarelo)}
 .av-counter{flex:none;font-size:12px;font-weight:400;color:var(--cinza);font-variant-numeric:tabular-nums}
 .av-main{min-width:0;padding:var(--s7) var(--s6) var(--s8) var(--s7);border-left:1px solid var(--cinza-claro);border-right:1px solid var(--cinza-claro)}
-.av-shell.comparando .av-main{padding-right:var(--m);border-right:0}
+.av-shell.larga .av-main{padding-right:var(--m);border-right:0}
 .av-head{display:grid;gap:var(--s3)}
 .av-head h1{font-weight:800;font-size:clamp(36px,4.4vw,64px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance;overflow-wrap:anywhere}
 .av-head h1.busca{font-size:clamp(22px,2.2vw,30px);line-height:1.1}
@@ -165,8 +165,30 @@ mark{background:none;color:inherit;text-decoration:underline;text-decoration-col
 .av-barra{position:sticky;bottom:0;z-index:2;display:flex;align-items:center;gap:var(--s2) var(--s5);flex-wrap:wrap;margin-top:var(--s6);padding:var(--s3) 0;border-top:2px solid var(--cinza);background:var(--branco)}
 .av-barra{transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease)}
 @starting-style{.av-barra{opacity:0;transform:translateY(8px)}}
-.av-barra p{flex:1 1 260px;min-width:0;font-size:14px;line-height:1.35}
+.av-barra p{flex:1 1 220px;min-width:0;font-size:14px;line-height:1.35}
+.barra-grupo{display:flex;align-items:center;gap:var(--s2) var(--s4);flex:0 1 auto;flex-wrap:wrap;min-width:0}
+.barra-grupo p{flex:0 1 auto}
+.av-barra:has(.barra-grupo+.barra-grupo){gap:var(--s3) var(--s5)}
 .av-barra strong{font-weight:800;color:var(--preto)}
+
+/* Montagem */
+.av-montagem{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s7);align-items:start;margin-top:var(--s6)}
+.mt-edicao{display:grid;gap:var(--s6);min-width:0}
+.mt-cena{display:grid;gap:var(--s2)}
+.mt-cena label{font-weight:600;font-size:13px;letter-spacing:0}
+.mt-cena textarea{width:100%;min-height:96px;padding:var(--s3);border:1px solid var(--cinza);border-radius:0;background:var(--branco);font:400 16px/1.45 var(--font);letter-spacing:0;color:var(--cinza);resize:vertical}
+.mt-cena textarea::placeholder{color:var(--cinza);opacity:1;font-weight:300}
+.mt-cena textarea:focus{border-color:var(--preto)}
+.mt-bloco h2,.mt-final h2{font-weight:800;font-size:22px;line-height:1.1;letter-spacing:-.02em;text-transform:uppercase}
+.mt-lista{list-style:none;margin:var(--s4) 0 0;padding:0}
+.mt-item{display:grid;gap:var(--s2);padding:var(--s4) 0;border-top:1px solid var(--cinza-claro)}
+.mt-item h3{font-weight:800;font-size:18px;line-height:1.15;letter-spacing:-.02em}
+.mt-trecho{font-size:15px;line-height:1.45;text-wrap:pretty}
+.mt-item .acoes{gap:0 var(--s5)}
+.mt-vazio{display:grid;gap:var(--s2);justify-items:start;margin-top:var(--s4);padding:var(--s4) 0;border-top:1px solid var(--cinza-claro);font-size:15px}
+.mt-final{position:sticky;top:var(--s5);display:grid;gap:var(--s4);justify-items:start;min-width:0}
+.mt-final>.colavel{justify-self:stretch}
+#mt-previa p+p{margin-top:var(--s3)}
 
 /* Sobre o acervo */
 .av-sobre{margin-top:var(--s8);border-top:1px solid var(--cinza-claro)}
@@ -203,8 +225,10 @@ mark{background:none;color:inherit;text-decoration:underline;text-decoration-col
  .cap-num{display:inline;margin:0 .25em 0 0}
 }
 @media (max-width:959px){
- .av-shell,.av-shell.comparando{grid-template-columns:var(--aside) minmax(0,1fr)}
- .av-main,.av-shell.comparando .av-main{padding-right:var(--m);border-right:0}
+ .av-montagem{grid-template-columns:minmax(0,1fr);gap:var(--s6)}
+ .mt-final{position:static}
+ .av-shell,.av-shell.larga{grid-template-columns:var(--aside) minmax(0,1fr)}
+ .av-main,.av-shell.larga .av-main{padding-right:var(--m);border-right:0}
  .av-painel{display:contents}
  .av-painel-vazio{display:none}
  .av-detail{position:fixed;inset:0;width:100%;max-width:none;height:100%;max-height:none;padding:var(--s5) var(--m) var(--s7);overflow:auto;overscroll-behavior:contain;border:0}
@@ -220,7 +244,7 @@ mark{background:none;color:inherit;text-decoration:underline;text-decoration-col
  .lei{padding-top:var(--s7)}
  .artigo{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-template-areas:"num" "corpo" "clausula" "copiar";gap:var(--s3) 0}
  .artigo>.link{margin-top:calc(-1 * var(--s2))}
- .av-shell,.av-shell.comparando{grid-template-columns:minmax(0,1fr)}
+ .av-shell,.av-shell.larga{grid-template-columns:minmax(0,1fr)}
  .av-aside{display:none}
  html:has(#secao-acervo:not([hidden])){scroll-padding-top:80px}
  .av-main{padding:var(--s6) var(--m) var(--s7);border-left:0}
@@ -288,6 +312,18 @@ mark{background:none;color:inherit;text-decoration:underline;text-decoration-col
   <p id="av-count" role="status" aria-live="polite"></p>
   <div class="av-corpo" id="av-corpo"><ul id="av-grid" class="av-grid" role="list"></ul><div id="av-vazio" class="av-empty" hidden></div></div>
   <section id="av-comparacao" class="av-comparacao" aria-label="Comparação de fichas" hidden></section>
+  <section id="av-montagem" class="av-montagem" aria-label="Montagem do prompt" hidden>
+   <div class="mt-edicao">
+    <div class="mt-cena"><label for="mt-cena">Cena (opcional)</label><textarea id="mt-cena" name="cena" rows="3" maxlength="400" placeholder="Uma mulher espera o ônibus no Centro, à noite…"></textarea><p class="nota">Abre o prompt. Quem, onde, quando.</p></div>
+    <div class="mt-bloco"><h2 id="mt-fichas-t">Fichas</h2><div id="mt-fichas"></div></div>
+   </div>
+   <section class="mt-final" aria-labelledby="mt-final-t"><h2 id="mt-final-t">Prompt montado</h2>
+    <label class="checar"><input type="checkbox" data-incluir-lei>Incluir a Lei do realismo no fim</label>
+    <div class="acoes"><button type="button" class="primario" data-copiar-montagem>Copiar prompt montado</button><button type="button" class="link" data-limpar-montagem>Limpar montagem</button></div>
+    <div id="mt-previa" class="colavel" aria-label="Prévia do prompt montado"></div>
+    <button type="button" class="secundario" data-voltar>Voltar às fichas</button>
+   </section>
+  </section>
   <div id="av-barra" class="av-barra" hidden></div>
   <details id="av-sources" class="av-sobre"><summary><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M0 6h12" stroke="currentColor" stroke-width="2"/><path class="mais-v" d="M6 0v12" stroke="currentColor" stroke-width="2"/></svg>Sobre o acervo: cobertura, fontes e critérios</summary><div id="av-source-list"></div></details>
  </div>
@@ -318,25 +354,29 @@ const GRUPOS=[
 {const soltos=cats.filter(c=>c!=='Todos'&&!GRUPOS.some(g=>g[1].includes(c)));if(soltos.length)GRUPOS.push(['Outros',soltos]);}
 /* Uma linha por módulo. Rascunho editorial para revisão. */
 const DESC={
- 'Todos':'Plano, ângulo, luz, câmera, lente, dramaturgia e lugar. Fichas breves, prompts sob demanda.',
- 'Planos':'Quanto do corpo e do lugar entra no quadro, do grande plano geral ao detalhe.',
- 'Ângulos e ponto de vista':'De onde a câmera olha: altura, inclinação e o lado do rosto que aparece.',
+ 'Todos':'Todas as fichas do acervo. Escolha o recurso, copie o prompt, a Lei vai junto.',
+ 'Planos':'Quanto do corpo e do lugar entra no quadro. Do grande plano geral ao detalhe.',
+ 'Ângulos e ponto de vista':'De onde a câmera olha. Altura e inclinação mudam quem manda na cena.',
  'Composição':'Onde cada coisa fica no quadro e para onde o olho vai primeiro.',
  'Luz':'Direção, dureza e fonte. A luz decide o clima antes da cor.',
  'Cor e atmosfera':'Paleta, temperatura e saturação que dão o tom da cena.',
- 'Efeitos e aparência':'O que foco, perspectiva e tempo de exposição fazem com a imagem.',
- 'Câmera e movimento':'Como a câmera se desloca durante o plano. Para vídeo e sequência.',
- 'Câmeras e suportes':'O corpo da câmera e o que a sustenta: cinema, TV, película, drone, ombro.',
- 'Lentes':'Distância focal e caráter da lente. A perspectiva começa aqui.',
+ 'Efeitos e aparência':'Foco, perspectiva e obturador. O que a óptica faz com a imagem.',
+ 'Câmera e movimento':'Como a câmera se move durante o plano. Para vídeo e sequência.',
+ 'Câmeras e suportes':'Cinema, TV, película, vigilância, drone, ombro. Cada corpo deixa uma marca.',
+ 'Lentes':'De 14 a 135 mm. A perspectiva começa na escolha da focal.',
  'Sequência e continuidade':'Como um plano conversa com o seguinte. Base da futura seção de vídeo.',
- 'Encenação e direção de arte':'Corpo, pose, grupo e a matéria do cenário.',
- 'Dramaturgia brasileira':'O look de série e de novela brasileira, do estúdio à rua.',
- 'Rio e Brasil':'Lugares, gente e objetos do Rio como são, não como cartão-postal.',
+ 'Encenação e direção de arte':'Corpo, pose, grupo e a matéria do cenário. O que está diante da câmera.',
+ 'Dramaturgia brasileira':'Série de streaming ou novela de estúdio. A gramática da TV brasileira.',
+ 'Rio e Brasil':'Rua, morro, viatura, repartição. O Rio como é, não como cartão-postal.',
  [SEL]:'Fichas marcadas para revisão. Ficam guardadas neste navegador.'
 };
+const DESC_MONTAGEM='Uma ficha por módulo, na ordem que o gerador lê melhor. A cena abre, a Lei fecha.';
+/* Ordem do pedido (Art. 16): cena, lugar e pessoas, câmera e lente, quadro, luz, cor, textura */
+const ORDEM=['Dramaturgia brasileira','Rio e Brasil','Encenação e direção de arte','Câmeras e suportes','Lentes','Câmera e movimento','Sequência e continuidade','Planos','Ângulos e ponto de vista','Composição','Luz','Cor e atmosfera','Efeitos e aparência'];
+const posOrdem=c=>{const i=ORDEM.indexOf(c);return i<0?ORDEM.length:i;};
 const CHAVE='acervo-visual-v4';
 const porId=new Map(data.map(d=>[d.id,d]));
-let state={view:'lei',cat:'Planos',catAntes:null,q:'',saved:[],compare:[],incluirLei:true};
+let state={view:'lei',cat:'Planos',catAntes:null,q:'',saved:[],compare:[],monta:[],cena:'',incluirLei:true};
 let detalhe=null,modo='fichas',rota=null,viewAtual=null;
 const mqPainel=matchMedia('(min-width:960px)');
 
@@ -350,9 +390,11 @@ function restore(s){if(!s||typeof s!=='object')return;
  if(typeof s.cat==='string'&&(cats.includes(s.cat)||s.cat===SEL))state.cat=s.cat;
  if(Array.isArray(s.saved))state.saved=s.saved.filter(id=>porId.has(id));
  if(Array.isArray(s.compare))state.compare=s.compare.filter(id=>porId.has(id)).slice(0,2);
+ if(Array.isArray(s.monta)){const vistos=new Set();state.monta=s.monta.filter(id=>{const d=porId.get(id);if(!d||vistos.has(d.cat))return false;vistos.add(d.cat);return true;});}
+ if(typeof s.cena==='string')state.cena=s.cena.slice(0,400);
  if(typeof s.incluirLei==='boolean')state.incluirLei=s.incluirLei;}
 try{const v4=localStorage.getItem(CHAVE);if(v4)restore(JSON.parse(v4));else restore(JSON.parse(localStorage.getItem('acervo-visual-v3')||'null'));}catch{}
-function persist(){try{localStorage.setItem(CHAVE,JSON.stringify({view:state.view,cat:state.cat,saved:state.saved,compare:state.compare,incluirLei:state.incluirLei}));}catch{}}
+function persist(){try{localStorage.setItem(CHAVE,JSON.stringify({view:state.view,cat:state.cat,saved:state.saved,compare:state.compare,monta:state.monta,cena:state.cena,incluirLei:state.incluirLei}));}catch{}}
 
 /* Busca: sem acento, início de palavra, "85 mm" = "85mm" */
 const DIAC=/[̀-ͯ]/g;
@@ -398,25 +440,26 @@ function contagens(ts){const porCat={};let total=0,sel=0;
  for(const d of data){if(!casa(d,ts))continue;total++;porCat[d.cat]=(porCat[d.cat]||0)+1;if(state.saved.includes(d.id))sel++;}
  return{porCat,total,sel};}
 function renderNav(k){
- const atual=modo==='comparar'?null:state.cat;
+ const atual=modo==='fichas'?state.cat:null;
  const bt=(cat,n)=>`<li><button type="button" data-cat="${esc(cat)}"${atual===cat?' aria-current="true"':''}><span class="rotulo">${esc(nomeCat(cat))}</span><span class="av-counter">${n}</span></button></li>`;
- $('#av-nav').innerHTML=`<ul role="list">${bt('Todos',k.total)}</ul>`+GRUPOS.map((g,i)=>`<div role="group" aria-labelledby="grupo-${i}"><p class="av-grupo-titulo" id="grupo-${i}">${esc(g[0])}</p><ul role="list">${g[1].map(c=>bt(c,k.porCat[c]||0)).join('')}</ul></div>`).join('')+`<ul role="list" class="av-nav-sel">${bt(SEL,k.sel)}</ul>`;
+ $('#av-nav').innerHTML=`<ul role="list">${bt('Todos',k.total)}</ul>`+GRUPOS.map((g,i)=>`<div role="group" aria-labelledby="grupo-${i}"><p class="av-grupo-titulo" id="grupo-${i}">${esc(g[0])}</p><ul role="list">${g[1].map(c=>bt(c,k.porCat[c]||0)).join('')}</ul></div>`).join('')+`<ul role="list" class="av-nav-sel">${bt(SEL,k.sel)}<li><button type="button" data-ir-montagem${modo==='montagem'?' aria-current="true"':''}><span class="rotulo">Montagem</span><span class="av-counter">${state.monta.length}</span></button></li></ul>`;
  const s=$('#av-modulo');
- s.innerHTML=`<option value="Todos">Todas as fichas (${k.total})</option>`+GRUPOS.map(g=>`<optgroup label="${esc(g[0])}">${g[1].map(c=>`<option value="${esc(c)}">${esc(c)} (${k.porCat[c]||0})</option>`).join('')}</optgroup>`).join('')+`<option value="${SEL}">Minha seleção (${k.sel})</option>`;
- s.value=state.cat;
+ s.innerHTML=`<option value="Todos">Todas as fichas (${k.total})</option>`+GRUPOS.map(g=>`<optgroup label="${esc(g[0])}">${g[1].map(c=>`<option value="${esc(c)}">${esc(c)} (${k.porCat[c]||0})</option>`).join('')}</optgroup>`).join('')+`<option value="${SEL}">Minha seleção (${k.sel})</option><option value="__montagem">Montagem (${state.monta.length})</option>`;
+ s.value=modo==='montagem'?'__montagem':state.cat;
 }
 function card(d,ts,mostraCat){
- const marcas=[state.saved.includes(d.id)?'Na revisão':'',state.compare.includes(d.id)?'Na comparação':''].filter(Boolean);
+ const marcas=[state.saved.includes(d.id)?'Na revisão':'',state.compare.includes(d.id)?'Na comparação':'',state.monta.includes(d.id)?'Na montagem':''].filter(Boolean);
  return `<li class="av-card"><button type="button" class="av-open" data-open="${d.id}"${d.id===detalhe?' aria-current="true"':''}>${art(d)}<span class="av-name">${realce(d.name,ts)}</span><span class="av-alias">${mostraCat?esc(d.cat)+' · ':''}${realce(d.alias,ts)}</span><span class="av-desc">${realce(d.read,ts)}</span>${marcas.length?`<span class="av-marcas">${marcas.join(' · ')}</span>`:''}</button></li>`;
 }
 function renderAcervo(){
- const ts=termos(state.q);const k=contagens(ts);const cmp=modo==='comparar';
+ const ts=termos(state.q);const k=contagens(ts);const cmp=modo!=='fichas';
  renderNav(k);
  if($('#av-search').value!==state.q)$('#av-search').value=state.q;
  const l=cmp?[]:lista(ts);
  const h=$('#av-heading'),intro=$('#av-intro');
  h.classList.toggle('busca',!cmp&&ts.length>0);
- if(cmp){h.textContent='Comparar fichas';intro.innerHTML='<p>Duas fichas, com os prompts completos.</p>';}
+ if(modo==='comparar'){h.textContent='Comparar fichas';intro.innerHTML='<p>Duas fichas, com os prompts completos.</p>';}
+ else if(modo==='montagem'){h.textContent='Montagem';intro.innerHTML=`<p>${esc(DESC_MONTAGEM)}</p>`;}
  else if(ts.length){
   h.textContent=`Resultados para “${state.q.trim()}”`;
   intro.innerHTML=l.length?`${state.cat!=='Todos'?'<p>Só em '+esc(nomeCat(state.cat))+'.</p>':''}<div class="acoes">${state.cat!=='Todos'?'<button type="button" class="link" data-todos-modulos>Buscar em todos os módulos</button>':''}<button type="button" class="link" data-limpar-busca>Limpar busca</button></div>`:'';
@@ -430,10 +473,11 @@ function renderAcervo(){
   if(state.cat===SEL&&!ts.length)vazio.innerHTML='<p>Nenhuma ficha marcada para revisão. Abra uma ficha e use Marcar para revisão.</p><button type="button" class="link" data-cat="Todos">Ver todas as fichas</button>';
   else vazio.innerHTML=`<p>Nenhuma ficha para “${esc(state.q.trim())}”${state.cat!=='Todos'?' em '+esc(nomeCat(state.cat)):''}.</p><div class="acoes">${state.cat!=='Todos'?'<button type="button" class="link" data-todos-modulos>Buscar em todos os módulos</button>':''}<button type="button" class="link" data-limpar-busca>Limpar busca</button></div>`;
  }
- renderDetalhe();renderComparar();renderBarra();
+ renderDetalhe();renderComparar();renderMontagem();renderBarra();
 }
 function htmlDetalhe(d){
  const naRev=state.saved.includes(d.id),naCmp=state.compare.includes(d.id),cheia=state.compare.length>=2&&!naCmp;
+ const naMt=state.monta.includes(d.id),outra=state.monta.map(x=>porId.get(x)).find(x=>x.cat===d.cat&&x.id!==d.id);
  return `<div class="av-detailhead"><h2 id="av-detail-titulo" tabindex="-1">${esc(d.name)}</h2><button type="button" class="secundario" data-close aria-label="Fechar ficha">Fechar</button></div>
 <p class="av-alias">${esc(d.cat)} · ${esc(d.alias)}</p>${art(d)}
 <p class="av-read">${esc(d.read)}</p>
@@ -441,12 +485,12 @@ function htmlDetalhe(d){
 <label class="checar"><input type="checkbox" data-incluir-lei${state.incluirLei?' checked':''}>Incluir a Lei do realismo no fim</label>
 <div class="acoes"><button type="button" class="primario" data-copy="#av-prompt" data-com-lei>Copiar prompt</button><a class="link" href="#lei">Ler a lei</a></div></section>
 <dl class="av-meta"><dt>Origem</dt><dd>${esc(d.status)}</dd><dt>Base</dt><dd>${esc(d.src)}</dd><dt>${/^\d/.test(d.pages)?'Página do PDF':'Referência'}</dt><dd>${esc(d.pages)}</dd><dt>Imagem</dt><dd>${d.img?'Referência incorporada':'A selecionar'}</dd></dl>
-<div class="av-curadoria"><button type="button" class="secundario" data-save="${d.id}" aria-pressed="${naRev}">Marcar para revisão</button><button type="button" class="secundario" data-compare="${d.id}" aria-pressed="${naCmp}"${cheia?' disabled':''}>Comparar</button></div>${cheia?'<p class="nota">A comparação já tem duas fichas. Remova uma ou limpe a comparação na barra.</p>':''}`;
+<div class="av-curadoria"><button type="button" class="secundario" data-montar="${d.id}" aria-pressed="${naMt}">Adicionar à montagem</button><button type="button" class="secundario" data-save="${d.id}" aria-pressed="${naRev}">Marcar para revisão</button><button type="button" class="secundario" data-compare="${d.id}" aria-pressed="${naCmp}"${cheia?' disabled':''}>Comparar</button></div>${outra?`<p class="nota">A montagem já tem ${esc(outra.name)} em ${esc(d.cat)}. Adicionar esta ficha substitui a anterior.</p>`:''}${cheia?'<p class="nota">A comparação já tem duas fichas. Remova uma ou limpe a comparação na barra.</p>':''}`;
 }
 function ehModal(dlg){try{return dlg.matches(':modal');}catch{return false;}}
 function renderDetalhe(){
  const dlg=$('#av-detail'),ativo=!!detalhe&&state.view==='acervo'&&modo==='fichas';
- $('#secao-acervo').classList.toggle('comparando',modo==='comparar');
+ $('#secao-acervo').classList.toggle('larga',modo!=='fichas');
  $('#av-painel-vazio').hidden=ativo;
  root.querySelectorAll('#av-painel-vazio [data-incluir-lei]').forEach(c=>{c.checked=state.incluirLei;});
  if(!ativo){if(dlg.open)dlg.close();return;}
@@ -461,10 +505,30 @@ function renderComparar(){
 <label class="checar"><input type="checkbox" data-incluir-lei${state.incluirLei?' checked':''}>Incluir a Lei do realismo no fim ao copiar</label>
 <div class="acoes"><button type="button" class="secundario" data-voltar>Voltar às fichas</button><button type="button" class="link" data-limpar>Limpar comparação</button></div>`;
 }
+function itensMontagem(){return state.monta.map(id=>porId.get(id)).filter(Boolean).sort((a,b)=>posOrdem(a.cat)-posOrdem(b.cat));}
+const fecha=t=>{t=String(t).trim();return /[.!?…]$/.test(t)?t:t+'.';};
+function partesMontagem(){const corpo=[];if(state.cena.trim())corpo.push(fecha(state.cena));for(const d of itensMontagem())corpo.push(fecha(d.prompt));return{corpo:corpo.join(' '),lei:state.incluirLei?lei.bloco:''};}
+function textoMontagem(){const p=partesMontagem();return [p.corpo,p.lei].filter(Boolean).join('\n\n');}
+function renderPrevia(){
+ const p=partesMontagem(),vazio=!p.corpo;
+ $('#mt-previa').innerHTML=vazio?'<p>Escreva a cena ou adicione fichas para montar o prompt.</p>':[p.corpo,p.lei].filter(Boolean).map(t=>`<p>${esc(t)}</p>`).join('');
+ const b=root.querySelector('[data-copiar-montagem]');if(b)b.disabled=vazio;
+}
+function renderMontagem(){
+ const sec=$('#av-montagem');sec.hidden=modo!=='montagem';if(sec.hidden)return;
+ const ta=$('#mt-cena');if(ta.value!==state.cena)ta.value=state.cena;
+ const itens=itensMontagem();
+ $('#mt-fichas').innerHTML=itens.length?`<ol class="mt-lista" aria-labelledby="mt-fichas-t">${itens.map(d=>`<li class="mt-item"><h3>${esc(d.name)}</h3><p class="av-alias">${esc(d.cat)} · ${esc(d.alias)}</p><p class="mt-trecho">${esc(d.prompt)}</p><div class="acoes"><button type="button" class="link" data-open="${d.id}">Abrir ficha</button><button type="button" class="link" data-remover-montagem="${d.id}" aria-label="Remover ${esc(d.name)} da montagem">Remover</button></div></li>`).join('')}</ol>`
+  :'<div class="mt-vazio"><p>Abra fichas de módulos diferentes e use Adicionar à montagem.</p><button type="button" class="link" data-voltar>Ver as fichas</button></div>';
+ root.querySelectorAll('#av-montagem [data-incluir-lei]').forEach(c=>{c.checked=state.incluirLei;});
+ renderPrevia();
+}
 function renderBarra(){
- const b=$('#av-barra'),n=state.compare.length;
- b.hidden=!(state.view==='acervo'&&modo!=='comparar'&&n>0);if(b.hidden){b.innerHTML='';return;}
- b.innerHTML=`<p><strong>Comparação ${n}/2</strong> · ${state.compare.map(id=>esc(porId.get(id).name)).join(' e ')}${n<2?'. Escolha mais uma ficha.':''}</p><button type="button" class="primario" data-ir-comparar${n<2?' disabled':''}>Comparar</button><button type="button" class="link" data-limpar>Limpar</button>`;
+ const b=$('#av-barra'),n=state.compare.length,m=state.monta.length;
+ b.hidden=!(state.view==='acervo'&&modo==='fichas'&&(n>0||m>0));if(b.hidden){b.innerHTML='';return;}
+ const gm=m?`<div class="barra-grupo"><p><strong>Montagem</strong> · ${plural(m,'ficha','fichas')}</p><button type="button" class="primario" data-ir-montagem>Ver montagem</button></div>`:'';
+ const gc=n?`<div class="barra-grupo"><p><strong>Comparação ${n}/2</strong>${m?'':' · '+state.compare.map(id=>esc(porId.get(id).name)).join(' e ')+(n<2?'. Escolha mais uma ficha.':'')}</p><button type="button" class="${m?'secundario':'primario'}" data-ir-comparar${n<2?' disabled':''}>Comparar</button><button type="button" class="link" data-limpar aria-label="Limpar comparação">Limpar</button></div>`:'';
+ b.innerHTML=gm+gc;
 }
 function renderSources(){
  const counts=data.reduce((a,d)=>(a[d.status]=(a[d.status]||0)+1,a),{});
@@ -477,9 +541,12 @@ async function copiar(btn){
  const el=root.querySelector(btn.dataset.copy);if(!el)return;
  const comLei=btn.hasAttribute('data-com-lei')&&state.incluirLei;
  let texto=el.textContent.trim();if(comLei)texto+='\n\n'+lei.bloco;
+ return copiarTexto(btn,texto,el,comLei?'Prompt e Lei copiados.':'Texto copiado.');
+}
+async function copiarTexto(btn,texto,el,msg){
  const rot=btn.dataset.rotulo||(btn.dataset.rotulo=btn.textContent);
  let ok=false;try{await navigator.clipboard.writeText(texto);ok=true;}catch{ok=copiaAntiga(texto,btn.parentElement);btn.focus({preventScroll:true});}
- if(ok){btn.textContent='Copiado';anunciar(comLei?'Prompt e Lei copiados.':'Texto copiado.');}
+ if(ok){btn.textContent='Copiado';anunciar(msg);}
  else{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selecionado';anunciar('Texto selecionado: use Ctrl+C ou ⌘C.');}
  clearTimeout(btn._t);btn._t=setTimeout(()=>{btn.textContent=rot;},2000);
 }
@@ -499,7 +566,7 @@ function route(force){
  const view=(v==='acervo'||v==='lei')?v:state.view;
  const viewAntes=viewAtual,detAntes=detalhe,modoAntes=modo;
  state.view=view;
- if(view==='acervo'){modo=(sub==='comparar'&&state.compare.length===2)?'comparar':'fichas';detalhe=porId.has(sub)?sub:null;}
+ if(view==='acervo'){modo=(sub==='comparar'&&state.compare.length===2)?'comparar':sub==='montagem'?'montagem':'fichas';detalhe=porId.has(sub)?sub:null;}
  else{modo='fichas';detalhe=null;}
  renderView();renderAcervo();persist();viewAtual=view;pedePainel();
  if(view==='acervo'&&sub==='comparar'&&modo!=='comparar'){try{history.replaceState(history.state,'','#acervo');rota='#acervo';}catch{}}
@@ -508,8 +575,8 @@ function route(force){
  if(view==='acervo'){
   if(detalhe&&detalhe!==detAntes){const t=$('#av-detail-titulo');if(t)t.focus({preventScroll:true});const c=root.querySelector(`#av-grid [data-open="${detalhe}"]`);if(c&&mqPainel.matches)c.scrollIntoView({block:'nearest'});}
   else if(!detalhe&&detAntes&&modo==='fichas'){const c=root.querySelector(`#av-grid [data-open="${detAntes}"]`);(c||$('#av-search')).focus();}
-  if(modo==='comparar'&&modoAntes!=='comparar'){topoDoMain();$('#av-heading').focus({preventScroll:true});}
-  else if(modo==='fichas'&&modoAntes==='comparar'&&!detalhe){$('#av-heading').focus({preventScroll:true});}
+  if(modo!=='fichas'&&modoAntes!==modo){topoDoMain();$('#av-heading').focus({preventScroll:true});}
+  else if(modo==='fichas'&&modoAntes!=='fichas'&&!detalhe){$('#av-heading').focus({preventScroll:true});}
  }
 }
 function mudarCat(cat){state.cat=cat;state.catAntes=null;renderAcervo();persist();topoDoMain();pedePainel();}
@@ -527,14 +594,24 @@ root.addEventListener('click',e=>{
  if(b.dataset.save){const id=b.dataset.save,tinha=state.saved.includes(id);state.saved=tinha?state.saved.filter(x=>x!==id):[...state.saved,id];renderAcervo();persist();anunciar(tinha?'Ficha removida da revisão.':'Ficha marcada para revisão.');root.querySelector(`#av-detail [data-save="${id}"]`)?.focus();return;}
  if(b.dataset.compare){const id=b.dataset.compare,tinha=state.compare.includes(id);state.compare=tinha?state.compare.filter(x=>x!==id):[...state.compare,id].slice(0,2);renderAcervo();persist();anunciar(tinha?'Ficha removida da comparação.':`Ficha adicionada à comparação, ${state.compare.length} de 2.`);root.querySelector(`#av-detail [data-compare="${id}"]`)?.focus();return;}
  if(b.hasAttribute('data-ir-comparar')){ir('#acervo/comparar');return;}
+ if(b.hasAttribute('data-ir-montagem')){if(modo!=='montagem')ir('#acervo/montagem');return;}
+ if(b.dataset.montar){const id=b.dataset.montar,d=porId.get(id);let msg;
+  if(state.monta.includes(id)){state.monta=state.monta.filter(x=>x!==id);msg=`${d.name} saiu da montagem.`;}
+  else{const antiga=state.monta.map(x=>porId.get(x)).find(x=>x.cat===d.cat);state.monta=[...state.monta.filter(x=>!antiga||x!==antiga.id),id];msg=antiga?`${d.cat}: ${d.name} substituiu ${antiga.name}.`:`${d.name} entrou na montagem, ${plural(state.monta.length,'ficha','fichas')}.`;}
+  renderAcervo();persist();anunciar(msg);root.querySelector(`#av-detail [data-montar="${id}"]`)?.focus();return;}
+ if(b.dataset.removerMontagem){const id=b.dataset.removerMontagem,d=porId.get(id);const i=itensMontagem().findIndex(x=>x.id===id);
+  state.monta=state.monta.filter(x=>x!==id);renderAcervo();persist();anunciar(`${d.name} saiu da montagem.`);
+  const prox=root.querySelectorAll('#mt-fichas [data-remover-montagem]');(prox[Math.min(i,prox.length-1)]||$('#mt-cena')).focus();return;}
+ if(b.hasAttribute('data-copiar-montagem')){copiarTexto(b,textoMontagem(),$('#mt-previa'),state.incluirLei?'Prompt montado e Lei copiados.':'Prompt montado copiado.');return;}
+ if(b.hasAttribute('data-limpar-montagem')){state.monta=[];state.cena='';persist();renderAcervo();anunciar('Montagem limpa.');$('#mt-cena').focus();return;}
  if(b.hasAttribute('data-voltar')){voltarParaLista();return;}
  if(b.hasAttribute('data-limpar')){state.compare=[];persist();anunciar('Comparação limpa.');if(modo==='comparar')ir('#acervo',{replace:true});else{renderAcervo();$('#av-search').focus();}return;}
  if(b.hasAttribute('data-limpar-busca')){state.q='';if(state.catAntes){state.cat=state.catAntes;state.catAntes=null;}renderAcervo();$('#av-search').focus();return;}
  if(b.hasAttribute('data-todos-modulos')){state.cat='Todos';state.catAntes=null;renderAcervo();persist();$('#av-search').focus();return;}
 });
 root.addEventListener('change',e=>{
- if(e.target.matches('[data-incluir-lei]')){state.incluirLei=e.target.checked;root.querySelectorAll('[data-incluir-lei]').forEach(c=>{c.checked=state.incluirLei;});persist();}
- if(e.target.id==='av-modulo'){mudarCat(e.target.value);}
+ if(e.target.matches('[data-incluir-lei]')){state.incluirLei=e.target.checked;root.querySelectorAll('[data-incluir-lei]').forEach(c=>{c.checked=state.incluirLei;});persist();if(modo==='montagem')renderPrevia();}
+ if(e.target.id==='av-modulo'){if(e.target.value==='__montagem')ir('#acervo/montagem');else{if(modo!=='fichas')ir('#acervo');mudarCat(e.target.value);}}
 });
 $('#av-search').addEventListener('input',e=>{
  const antes=state.q.trim(),agora=e.target.value.trim();state.q=e.target.value;
@@ -542,11 +619,12 @@ $('#av-search').addEventListener('input',e=>{
  if(antes&&!agora&&state.catAntes){state.cat=state.catAntes;state.catAntes=null;}
  renderAcervo();persist();pedePainel();
 });
+$('#mt-cena').addEventListener('input',e=>{state.cena=e.target.value.slice(0,400);renderPrevia();persist();});
 $('#av-detail').addEventListener('cancel',e=>{e.preventDefault();voltarParaLista();});
 root.addEventListener('keydown',e=>{
  if(e.key!=='Escape'||state.view!=='acervo')return;
  if(detalhe&&!ehModal($('#av-detail'))){e.preventDefault();voltarParaLista();}
- else if(modo==='comparar'){e.preventDefault();voltarParaLista();}
+ else if(modo!=='fichas'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();voltarParaLista();}
 });
 const aoMudarTela=()=>{if(detalhe){const d=$('#av-detail');if(d.open)d.close();renderDetalhe();}};
 if(mqPainel.addEventListener)mqPainel.addEventListener('change',aoMudarTela);else mqPainel.addListener(aoMudarTela);

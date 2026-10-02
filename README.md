@@ -7,6 +7,7 @@ Página de consulta em duas partes, no design system da V3A:
    - A busca procura em todas as fichas.
    - A ficha abre num painel ao lado (em tela cheia no celular), com o prompt em destaque e a opção de incluir a Lei ao copiar.
    - Dá para marcar fichas para revisão e comparar duas lado a lado, com os prompts completos.
+   - A Montagem junta uma ficha por módulo, uma cena opcional e a Lei num prompt único, na ordem do artigo 16 da Lei.
    - Fichas e artigos têm endereço próprio, por exemplo `#acervo/ref-12` e `#lei/art-7`.
    - Referências visuais ainda aguardam curadoria.
 
